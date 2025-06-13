@@ -28,7 +28,7 @@ public class AppConfig {
     @Bean
     public DataSource getDataSource() {
         String driver = env.getProperty("db.driver");
-        System.out.println("DB Driver: " + driver); // Проверяем что считывается
+        System.out.println("DB Driver: " + driver);
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(driver);
         dataSource.setUrl(env.getProperty("db.url"));
